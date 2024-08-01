@@ -1,0 +1,7 @@
+/build/
+CMakeFiles/
+project_generator.sh
+pointer_check.py
+*.log
+
+# *** end of file ***
