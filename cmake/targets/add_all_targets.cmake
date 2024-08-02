@@ -30,9 +30,19 @@ function(add_remote_executables)
         TARGET_NAME         audio_capture
         ENDPOINT            remote
         TARGET_TYPE         EXE
-        SOURCE_DIR          projects
+        SOURCE_DIR          projects/audio_capture
         DESTINATION_DIR     projects
-        LIBRARIES           Common Math DSA Threading Networking
+        LIBRARIES           Common Math DSA Threading Networking asound
+    )
+
+    add_target(
+    #   [ FIELD ]-----------[ VALUE ]
+        TARGET_NAME         audio_playback
+        ENDPOINT            remote
+        TARGET_TYPE         EXE
+        SOURCE_DIR          projects/audio_playback
+        DESTINATION_DIR     projects
+        LIBRARIES           Common Math DSA Threading Networking asound
     )
 
 endfunction()
